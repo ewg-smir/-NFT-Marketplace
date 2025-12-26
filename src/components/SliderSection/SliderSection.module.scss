@@ -1,0 +1,69 @@
+.section {
+  padding: 80px 0;
+  background: #f8f9fb;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-size: 46px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #c0c0c0;
+}
+
+.carouselContainer {
+  overflow: hidden;
+  padding: 20px 0 40px;
+  display: flex;
+}
+
+.innerCarousel {
+  display: flex;
+  width: max-content;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: grab;
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.navButtons {
+  background: #ffffff;
+  padding: 12px 28px;
+  border-radius: 17.25px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.divider {
+  width: 1px;
+  height: 24px;
+  background: #e6e8ec;
+}

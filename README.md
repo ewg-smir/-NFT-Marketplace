@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NFT Marketplace Test Assignment
 
-## Getting Started
+Адаптивная верстка лендинга NFT маркетплейса с использованием Next.js, Redux Toolkit и Framer Motion.
 
-First, run the development server:
+## Технологии
 
-```bash
+- **Framework:** Next.js 14 (App Router)
+- **State:** Redux Toolkit
+- **Styles:** SCSS (Glassmorphism design)
+- **Animations:** Framer Motion
+- **API:** CoinGecko Public API
+
+## Запуск проекта локально
+
+1. Установите зависимости:
+   npm install
+
+2.Запустите сервер разработки:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Откройте приложение в браузере: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🐳 Запуск через Docker
+Проект полностью контейнеризирован. Для запуска выполните следующие команды в корне проекта:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Соберите Docker-образ:
+docker build -t nft-marketplace .
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Запустите контейнер:
+docker run -p 3000:3000 nft-marketplace
+Приложение будет доступно по адресу http://localhost:3000.
 
-## Learn More
+📋 Особенности реализации
+Адаптивность: Верстка полностью адаптивна под Desktop, Tablet и Mobile устройства.
 
-To learn more about Next.js, take a look at the following resources:
+Слайдер: Реализован кастомный слайдер на Framer Motion с поддержкой свайпов (drag-gestures) и инерции.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Данные:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Названия NFT подтягиваются из CoinGecko API.
 
-## Deploy on Vercel
+Цены и время окончания аукциона генерируются на клиенте (Mock data).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Изображения берутся из локальных ассетов для стабильности отображения.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Оптимизация: Настроен Dockerfile с использованием standalone режима Next.js для уменьшения размера итогового образа.

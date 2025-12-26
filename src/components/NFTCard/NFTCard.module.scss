@@ -1,0 +1,73 @@
+.card {
+  min-width: 280px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 16px;
+  margin-right: 24px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.imageContainer {
+  position: relative;
+  height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.timer {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(20, 20, 22, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 30px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bid {
+  span:first-child {
+    font-size: 12px;
+    color: #64748b;
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+}
+
+.bidButton {
+  background: #141416;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 12px; 
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); 
+}
